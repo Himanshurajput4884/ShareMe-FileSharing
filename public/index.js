@@ -51,14 +51,8 @@ const uploadfile = ()=>{
 
     const xhr = new XMLHttpRequest();
     xhr.onreadystatechange = () =>{
-        if(xhr.readyState === XMLHttpRequest.DONE){
-            inputfile.value = "";
-            emailform[2].removeAttribute("disabled");
-            linkshare.style.display = "flex";
-            cont1.style.height = "450px";
-            const {file : url} = JSON.parse(xhr.responseText);
-            console.log("const s = %s", url);
-            displaylink.value = url;
+        if(xhr.readyState == XMLHttpRequest.DONE){
+            uploadSuccess(xhr.responseText);
         }          
     }
 
@@ -67,6 +61,19 @@ const uploadfile = ()=>{
 
     xhr.send(formdata);
 }
+
+const uploadSuccess = (res)=>{
+    inputfile.value = "";
+    emailform[2].removeAttribute("disabled");
+    emailform[2].innerText = "Send";
+    linkshare.style.display = "flex";
+    cont1.style.height = "450px";
+    const { file: url } = JSON.parse(res);
+    console.log("const s = %s", url);
+    displaylink.value = url;
+}
+
+
 
 browse.addEventListener("click", ()=>{
     inputfile.click();                 // its a function
