@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShareMe</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+    <div class="sec1">
+        <div class="header">
+            <span>ShareMe</span>
+        </div>
+    </div>
+    <div class="sec2">
+        <div class="cont1">
+            <div class="upload_cont">
+                <div class="icons dragged">
+                    <img src="/img/put-in.png" alt="Icon" class="center" draggable="false">
+                </div>
+                <input type="file" id="inputfile">
+                <div class="text">Drag your file here, or <span class="browse">Browse</span></div>
+                </input>
+            </div>
+            <div class="linkshare-container">
+                <span>Link Expires in 24 Hours</span>
+                <div class="link">
+                    {{!-- <label for="forurl">Link Expires in 24 Hours</label> --}}
+                    <input type="text" name="url" id="displaylink" readonly>
+                    <img src="/img/copy_all_black_24dp.svg" id="pasteicon" alt="Paste">
+                </div>
+                <div class="emailinput">
+                    <span>Send via Email</span>
+                    <form action="" id="emailform">
+                        <div class="input-email">
+                            <label for="sender">Sender's Email </label>
+                            <input type="email" name="sender" id="sender" class="formemail" required>
+                        </div>
+                        <div class="input-email">
+                            <label for="receiver">Receiver's Email </label>
+                            <input type="email" name="receiver" id="receiver" class="formemail" required>
+                        </div>
+                        <button type="submit" id="submitbtn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="cont2">
+
+        </div>
+    </div>
+    <script src="/index.js"></script>
+</body>
+
+</html>

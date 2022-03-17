@@ -1,0 +1,6 @@
+.env
+upload/*
+!upload/.gitkeep
+node_modules
+imp
+note.txt

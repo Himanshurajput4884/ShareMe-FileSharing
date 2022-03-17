@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Page</title>
+    <link rel="stylesheet" href="/download.css">
+</head>
+
+<body>
+    <div class="sec1">
+        <div class="header">
+            <span><a href="/">ShareMe</a></span>
+        </div>
+    </div>
+    <div class="sec2">
+        <div class="downloadbox">
+            {{#if error }}
+            <h1>{{ error }}</h1>
+            {{else}}
+            <div class="responsive">
+                <div class="name">FileName :</div>
+                <div class="response">{{FileName}}</div>
+            </div>
+            <br>
+            <span>Size : {{size}}</span>
+            <div class="downloadbtn">
+                <a href="{{download}}">Download</a>
+            </div>
+            {{/if}}
+        </div>
+    </div>
+</body>
+
+</html>

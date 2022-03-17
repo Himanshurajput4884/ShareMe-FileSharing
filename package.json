@@ -1,0 +1,26 @@
+{
+  "name": "shareme",
+  "version": "1.0.0",
+  "description": "\"Application that allows to share files.\"",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "keywords": [
+    "'Let's",
+    "Start'"
+  ],
+  "author": "'Haddy's Project'",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "hbs": "^4.2.0",
+    "mongoose": "^6.2.5",
+    "multer": "^1.4.4",
+    "nodemailer": "^6.7.2",
+    "nodemon": "^2.0.15",
+    "uuid": "^8.3.2"
+  }
+}
