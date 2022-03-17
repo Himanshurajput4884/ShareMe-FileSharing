@@ -24,10 +24,10 @@ connectdb();
 
 // cors
 const corsOptions = {
-    origin: process.env.ALLOWED_CLIENTS.split(",")
+    origin: process.env.ALLOWED_CLIENTS.split(',')
 }
 
-//  as it is middleware to use this middleware
+
 app.use(cors(corsOptions));   
 
 // define routes
