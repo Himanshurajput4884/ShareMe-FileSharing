@@ -1,6 +1,8 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const path = require('path');
+const cors = require('cors');
+
 
 dotenv.config({ path: './.env'});
 
@@ -20,6 +22,13 @@ const { dirname } = require('path');
 connectdb();
 
 
+// cors
+const corsOptions = {
+    origin: process.env.ALLOWED_CLIENTS.split(",")
+}
+
+//  as it is middleware to use this middleware
+app.use(cors(corsOptions));   
 
 // define routes
 
