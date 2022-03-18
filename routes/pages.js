@@ -5,11 +5,9 @@ const path = require('path');
 const File = require('../models/file');
 const { v4: uuid4 } = require('uuid');  // we receive here version 4 API's
 
-
 router.get('/', (req, res)=>{
     res.render('index');
 })
-
 
 const storage = multer.diskStorage({
     destination: (req, file, cb)=> {
