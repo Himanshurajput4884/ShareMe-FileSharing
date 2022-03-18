@@ -1,3 +1,6 @@
+
+// const dotenv = require('dotenv');
+// const path = require('path');
 const dropzone = document.querySelector('.upload_cont');
 const inputfile = document.querySelector('#inputfile');
 const browse = document.querySelector('.browse');
@@ -8,8 +11,11 @@ const displaylink = document.querySelector("#displaylink");
 const emailform = document.querySelector('#emailform');
 const linkshare = document.querySelector('.linkshare-container');
 const cont1 = document.querySelector('.cont1');
+// const dotenv = require('dotenv');
 
-const host = "http://localhost:3005/";
+// dotenv.config({ path: '.env'});
+
+const host = "https://shareme-filesharing.herokuapp.com/";
 const uploadurl = `${host}api/files`;
 const emailurl = `${host}api/files/send`;
 
