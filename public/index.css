@@ -33,6 +33,22 @@ body{
     color: white;
 }
 
+.message{
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%);
+    border: 2px solid ghostwhite;
+    background-color: ghostwhite;
+    padding: 5px 15px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;;
+    display: none;
+
+    /* border-color: rgb(185, 139, 139); */
+}
+
+
 .sec2{
     background-color: rgb(55 57 78);
     height: 100vh;
