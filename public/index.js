@@ -14,7 +14,7 @@ const cont1 = document.querySelector('.cont1');
 
 // dotenv.config({ path: '.env'});
 
-const host = "https://shareme-filesharing.herokuapp.com/";
+const host = "https://shareme-file-sharing.onrender.com/";
 const uploadurl = `${host}api/files`;
 const emailurl = `${host}api/files/send`;
 
@@ -71,7 +71,7 @@ const uploadfile = ()=>{
     
     const formdata = new FormData();       // it create a form data with that we make post request.
     formdata.append("FileName", file);             // store the file in form data.
-
+    console.log(formdata);
     const xhr = new XMLHttpRequest();
     xhr.onreadystatechange = () =>{
         if(xhr.readyState == XMLHttpRequest.DONE){
@@ -86,6 +86,7 @@ const uploadfile = ()=>{
 }
 
 const uploadSuccess = (res)=>{
+    console.log(res);
     inputfile.value = "";
     emailform[2].removeAttribute("disabled");
     emailform[2].innerText = "Send";
